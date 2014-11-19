@@ -1,12 +1,21 @@
 <html>
-    <head>
-        <script>
+<head>
+    <script>
+    var shotsx = [8, 3, 1, 7,4];
+    var max = 0;
+    
+    for(var i = 0; i < shotsx.length; i++){
+        if(shotsx[i] > max){
+            max = shotsx[i];
+        }
+    }
         
-            var shotsx = [10, 20, 30, 50];
-            alert(shotsx);
         
-        </script>
+    alert(max);
+
+    </script>
 </head>
+    
 <body>
     
 </body>
