@@ -153,10 +153,13 @@ function paintInfo(){
     ctx.fillRect(50, 50, p1h, 10);
     ctx.fillRect(c.width - 150, 50, p2h, 10);
     ctx.fillStyle="black";
+    
+    for(var i = 0; i < p1l; i++){
+        paintTank(i * c.width * 0.05, 0);
+    }
+
+
 }
-
-
-
 
 
 function keyDown(e){
