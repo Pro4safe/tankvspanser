@@ -13,13 +13,22 @@ var p1x,
     s2y,
     s2vx,
     s2vy,
-    say;
+    say,
+    f1x=-40,
+    f1y = -40,
+    f2x = -40,
+    f2y = -40
+    p1h = 100
+    p2h = 100,
+    p1l=3,
+    p2l=3;
 
 function start(){
     c = document.getElementById("duk");
     ctx= c.getContext("2d");
     
     tankimg = document.getElementById("tankimg");
+    exploimg = document.getElementById("exploimg");
     
     c.width= window.innerWidth;
     c.height= window.innerHeight;
@@ -66,6 +75,41 @@ function updatePositions(){
     s2x += s2vx;
     s2y += s2vy;
     s2vy += say;
+    
+    if(s2x > p1x && s2x < p1x + c.width * 0.05 && s2y > p1y && s2y < p1y + c.height * 0.05){
+      
+        f1x = p1x;
+        f1y = p1y;
+        
+        p1h -= 30;
+        
+        s2y = c.height;
+        if(p2h < 0){
+        p2h=100;
+        p2l--
+    }
+        
+    }
+     
+    if(s1x > p2x && s1x < p2x + c.width * 0.05 && s1y > p2y && s1y < p2y + c.height * 0.05){
+       
+        f2x = p2x;
+        f2y = p2y;
+        
+        p2h -= 30;
+        
+        s1y = c.height;
+    if(p2h < 0){
+        p2h=100;
+        p2l--
+    }
+   
+    
+    }
+    
+    
+    
+    
 }
 
 function repaint(){
@@ -76,6 +120,13 @@ function repaint(){
     
     paintShot(s1x,s1y);
     paintShot(s2x,s2y);
+    
+    paintFire(f1x,f1y);
+    paintFire(f2x,f2y);
+    
+    paintInfo();
+
+
 }
 
 function paintTank(x, y){
@@ -90,6 +141,22 @@ function paintShot(x, y){
     ctx.fill();
     ctx.closePath();
 }
+
+function paintFire(x,y){
+     ctx.drawImage(exploimg ,x, y, c.width * 0.05, c.height * 0.05);
+}
+
+
+function paintInfo(){
+    //helth
+    ctx.fillStyle="red";
+    ctx.fillRect(50, 50, p1h, 10);
+    ctx.fillRect(c.width - 150, 50, p2h, 10);
+    ctx.fillStyle="black";
+}
+
+
+
 
 
 function keyDown(e){
@@ -132,10 +199,6 @@ if(e.keyCode==13){
     
 }
 
-
-
-
-
 function keyUp(e){
     if (e.keyCode==37 || e.keyCode==39){
     p2vx= 0;
@@ -145,6 +208,3 @@ function keyUp(e){
     }
 
 }
-
-
-
