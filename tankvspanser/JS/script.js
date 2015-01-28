@@ -1,4 +1,4 @@
-var c, ctx, tankimg;
+var c, ctx, tankimg, tank1img;
 var p1x, p1y, p1vx, p2x, p2y, p2vx, s1x, s1y, s1vx, s1vy, s2x, s2y, s2vx, s2vy, say,
     f1x = -40,
     f1y = -40,
@@ -20,6 +20,7 @@ function start() {
     ctx = c.getContext("2d");
 
     tankimg = document.getElementById("tankimg");
+    tank1img = document.getElementById("tank1img");
     exploimg = document.getElementById("exploimg");
 
     c.width = 1000;
@@ -106,8 +107,8 @@ function updatePositions() {
 function repaint() {
 
     ctx.clearRect(0, 0, c.width, c.height);
-    paintTank(p1x, p1y);
-    paintTank(p2x, p2y);
+    paintTank(p1x, p1y, tank1img);
+    paintTank(p2x, p2y, tankimg);
 
     paintShot(s1x, s1y);
     paintShot(s2x, s2y);
@@ -124,9 +125,9 @@ function repaint() {
 
 }
 
-function paintTank(x, y) {
+function paintTank(x, y, img) {
 
-    ctx.drawImage(tankimg, x, y, c.width * 0.05, c.height * 0.05);
+    ctx.drawImage(img, x, y, c.width * 0.05, c.height * 0.05);
 
 }
 

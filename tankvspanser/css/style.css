@@ -1,5 +1,6 @@
 body{
-    background-image: url()
+    background-image: url(...);
+    background-color: green;
 }
 canvas {
     background-color: grey;
