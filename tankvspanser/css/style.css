@@ -1,6 +1,12 @@
+body{
+    background-image: url()
+}
 canvas {
-    background:gray;
+    background-color: grey;
+    
 }
 .canvimg{
     display: none;
+    
 }
+
