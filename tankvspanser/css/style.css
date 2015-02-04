@@ -4,6 +4,7 @@ body{
 }
 canvas {
     background-color: grey;
+    background-image: url('img/backround.png')
     
 }
 .canvimg{

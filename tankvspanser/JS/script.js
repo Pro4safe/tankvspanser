@@ -78,9 +78,9 @@ function updatePositions() {
         p1h -= 30;
 
         s2y = c.height;
-        if (p2h < 0) {
-            p2h = 100;
-            p2l--;
+        if (p1h < 0) {
+            p1h = 100;
+            p1l--;
         }
 
     }
@@ -116,7 +116,7 @@ function repaint() {
     paintFire(f1x, f1y);
     paintFire(f2x, f2y);
 
-    paintInfo();
+    paintInfo(tank1img);
     
     ctx.font = "18px Arial";
     ctx.fillText(name1,850,95);
@@ -156,10 +156,13 @@ function paintInfo() {
     ctx.fillStyle = "black";
 
     for (var i = 0; i < p1l; i++) {
-        paintTank(i * c.width * 0.05, 0);
+        paintTank(i * c.width * 0.05, 0, tank1img);
     }
     
-
+    for (var i = 0; i < p1l; i++) {
+        paintTank(i * c.width * 0.05 + 800, 0, tankimg);
+    }
+    
 }
 
 
