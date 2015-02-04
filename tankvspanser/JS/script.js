@@ -159,7 +159,7 @@ function paintInfo() {
         paintTank(i * c.width * 0.05, 0, tank1img);
     }
     
-    for (var i = 0; i < p1l; i++) {
+    for (var i = 0; i < p2l; i++) {
         paintTank(i * c.width * 0.05 + 800, 0, tankimg);
     }
     

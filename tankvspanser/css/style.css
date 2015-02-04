@@ -1,14 +1,14 @@
 body{
     background-image: url(...);
-    background-color: green;
+    background-color: blue;
 }
 canvas {
-    background-color: grey;
-    background-image: url('img/backround.png')
+    background-color: rgba(87, 224, 224, 0.57);
+    background-image: url('img/backround.png');
     
 }
 .canvimg{
-    display: none;
+ display:none ;
     
 }
 
