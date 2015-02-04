@@ -3,8 +3,8 @@ body{
     background-color: blue;
 }
 canvas {
-    background-color: rgba(87, 224, 224, 0.57);
-    background-image: url('img/backround.png');
+    
+    background-image: url(../img/backround.png)
     
 }
 .canvimg{

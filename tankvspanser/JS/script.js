@@ -1,4 +1,4 @@
-var c, ctx, tankimg, tank1img;
+var c, ctx, tankimg, tank1img, backimg;
 var p1x, p1y, p1vx, p2x, p2y, p2vx, s1x, s1y, s1vx, s1vy, s2x, s2y, s2vx, s2vy, say,
     f1x = -40,
     f1y = -40,
@@ -22,7 +22,7 @@ function start() {
     tankimg = document.getElementById("tankimg");
     tank1img = document.getElementById("tank1img");
     exploimg = document.getElementById("exploimg");
-
+    
     c.width = 1000;
     c.height = 600;
     
