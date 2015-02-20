@@ -8,6 +8,7 @@ var p1x, p1y, p1vx, p2x, p2y, p2vx, s1x, s1y, s1vx, s1vy, s2x, s2y, s2vx, s2vy, 
     p2h = 100,
     p1l = 3,
     p2l = 3,
+    k1vy = -8,
     name1,
     name2;
 
@@ -169,7 +170,6 @@ function paintInfo() {
 function keyDown(e) {
     e.preventDefault();
 
-
     if (e.keyCode == 37) {
         p2vx = -c.width * 0.001;
 
@@ -191,10 +191,10 @@ function keyDown(e) {
         s1x = p1x + c.width * 0.05;
         s1y = p1y;
         s1vx = 2;
-        s1vy = -3;
+        s1vy = k1vy;
 
     }
-    if (e.keyCode == 13) {
+    if (e.keyCode == 32) {
 
         s2x = p2x;
         s2y = p2y;
