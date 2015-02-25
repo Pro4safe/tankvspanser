@@ -169,7 +169,7 @@ function paintInfo() {
 
 function keyDown(e) {
     e.preventDefault();
-
+    
     if (e.keyCode == 37) {
         p2vx = -c.width * 0.001;
 
@@ -194,6 +194,7 @@ function keyDown(e) {
         s1vy = k1vy;
 
     }
+    //skott knapp mellanslag
     if (e.keyCode == 32) {
 
         s2x = p2x;
@@ -201,7 +202,26 @@ function keyDown(e) {
         s2vx = -2;
         s2vy = -3;
     }
-
+    //arc på skottet vinkel öka uppil
+    if(e.keyCode == 40){
+    
+        k1vy = -1;
+        
+    }
+    //arc på skottet vinkel minska pil ner
+    if(e.keyCode == 38){
+    
+        
+        k1vy = -8;
+    }
+    //styrka på skott minska s
+    if(e.keyCode == 83){
+    
+    }
+    //styrka på skott öka w
+    if(e.keyCode == 87){
+    
+    }
 
 
 }
