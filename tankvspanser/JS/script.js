@@ -169,23 +169,25 @@ function paintInfo() {
 
 function keyDown(e) {
     e.preventDefault();
-    
+    //vänster pl2 vämster pil
     if (e.keyCode == 37) {
         p2vx = -c.width * 0.001;
 
     }
+    //höger pl2 höger pil
     if (e.keyCode == 39) {
         p2vx = c.width * 0.0005;
     }
-
+    //vänster pl1a
     if (e.keyCode == 65) {
         p1vx = -c.width * 0.0005;
 
     }
+    //höger pl1 d
     if (e.keyCode == 68) {
         p1vx = c.width * 0.001;
     }
-
+    
     if (e.keyCode == 32) {
 
         s1x = p1x + c.width * 0.05;
@@ -202,26 +204,27 @@ function keyDown(e) {
         s2vx = -2;
         s2vy = -3;
     }
-    //arc på skottet vinkel öka uppil
+    //rotera tornet öka pil up
     if(e.keyCode == 40){
     
         k1vy = -1;
         
     }
-    //arc på skottet vinkel minska pil ner
+    //rotera tornet minska .pil ner
     if(e.keyCode == 38){
     
         
         k1vy = -8;
     }
-    //styrka på skott minska s
-    if(e.keyCode == 83){
-    
-    }
     //styrka på skott öka w
     if(e.keyCode == 87){
     
     }
+    //styrka på skott minska s
+    if(e.keyCode == 83){
+    
+    }
+    
 
 
 }
