@@ -207,7 +207,7 @@ function keyDown(e) {
     //rotera tornet öka pil up
     if(e.keyCode == 40){
     
-        k1vy = -1;
+        k1vy = 0;
         
     }
     //rotera tornet minska .pil ner
