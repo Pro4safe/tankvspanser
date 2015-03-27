@@ -1,10 +1,9 @@
 body{
-    background-image: url(...);
     background-color: blue;
 }
 canvas {
     
-    background-image: url(../img/backround.png)
+    background-image: url(../img/backround.png);
     
 }
 .canvimg{
